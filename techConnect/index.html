@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<header>
+    <h1>TechConnect</h1>
+</header>
+<body>
+    <div id="form">
+        <h2>Formulário de Cadastro</h2>
+            <label>Nome Completo:</label><br><br>
+            <input type="text" id="nome" placeholder="Digite seu nome completo" required><br>
+            <p id="mensagem_nome"></p>
+
+            <label>E-mail:</label><br><br>
+            <input type="text" id="email" placeholder="maria@email.com" required>
+            <button type="button" id="add_email">Adicionar email</button>
+            <p id="mensagem_email"></p>
+
+            <div id="novo_email">
+                <p><label id="label_email"></label></p><br>
+                <input type="text" id="new_email" placeholder="maria@email.com" required>
+            </div><br><br>
+
+            <label>Telefone:</label><br><br>
+            <input type="text" id="telefone" placeholder="(00)00000-0000" required>
+            <button type="button" id="add_telefone">Adicionar Telefone</button>
+            
+            <label>Senha:</label><br><br>
+            <input type="password" id="senha" placeholder="Crie uma senha" required><br><br>
+            <ul>
+                <li id="maiusculas">Deve conter letras maiúsculas</li>
+                <li id="minusculas">Deve conter letras minusculas</li>
+                <li id="numero">Deve conter números</li>
+                <li id="caracteres">Deve conter caracteres especiais, ex: @, #, $, *</li>
+                <li id="minimo">Deve conter mais de 8 digitos</li>
+            </ul>
+
+            <label>Confirme sua senha:</label><br><br>
+            <input type="password" id="confirm_senha" placeholder="Crie uma senha" required><br><br>
+
+            <button type="button" id="cadastrar">Cadastrar</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+<footer>
+    <p>© 2026 TechConnect. Todos os direitos reservados.</p>
+</footer>
+</html>

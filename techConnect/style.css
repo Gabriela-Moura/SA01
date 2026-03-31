@@ -1,0 +1,73 @@
+body {
+    font-family: Arial;
+    text-align: center;
+    background-color: #DBEAFE;
+}
+
+input {
+    padding: 5px;
+    width: 200px;
+    border: 2px solid  #9a9da1;
+}
+input:hover{
+    border: 2px solid #00319a;
+    background-color: #DBEAFE;
+}
+input:active{
+    border: 2px solid #00319a;
+    background-color: #DBEAFE;
+}
+.erro{
+    color: red;
+}
+.certo{
+    color: green;
+}
+header, footer{
+    background-color:  #00319a;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100px;
+    padding: 20px;
+}
+#form{
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-left: 500px;
+    background-color: #FFFFFF;
+    padding: 20px;
+    width: 500px;
+    height: 800px;
+    border-radius: 50px;
+    border: 2px solid #00319a;
+}
+
+label{
+    font-weight: bold;
+}
+
+#cadastrar, #add_email, #add_telefone{
+    background-color: #8fc1ff;
+    border-radius: 4px;
+    height: 30px;
+    border: 2px solid #00319a;
+}
+
+#cadastrar:hover, #add_email:hover, #add_telefone:hover{
+    background-color: #DBEAFE;
+    border: 2px solid rgb(167, 167, 167);
+}
+
+#cadastrar:active, #add_email:active, #add_telefone:active{
+    background-color: #8fc1ff;
+    border: 2px solid #00319a;
+}
+
+ul{
+    text-align: justify;
+    color:#9a9da1
+}
+
+#email, #telefone{
+    margin-left: 110px;
+}
