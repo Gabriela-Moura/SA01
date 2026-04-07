@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Cadastro</title>
+    <!-- Faz o link com o ícone que permite mostrar e esconder a senha -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <header>
@@ -11,36 +13,118 @@
 <body>
     <div id="form">
         <h2>Formulário de Cadastro</h2>
+
+            <!--Campo nome ----------------------------------------------------------------------->
             <label>Nome Completo:</label><br><br>
             <input type="text" id="nome" placeholder="Digite seu nome completo" required><br>
             <p id="mensagem_nome"></p>
 
+            <!--Campo email ----------------------------------------------------------------------->
             <label>E-mail:</label><br><br>
-            <input type="text" id="email" placeholder="maria@email.com" required>
-            <button type="button" id="add_email">Adicionar email</button>
+            <input type="email" id="email" placeholder="maria@email.com" required>
             <p id="mensagem_email"></p>
 
-            <div id="novo_email">
-                <p><label id="label_email"></label></p><br>
-                <input type="text" id="new_email" placeholder="maria@email.com" required>
+            <!--Campo telefone --------------------------------------------------------------------->
+            <label>Telefone:</label><br><br>
+            <div id="div_telefone">
+                <input type="text" id="telefone" placeholder="(19) 99999-9999" required maxlength="17">
+                <button type="button" id="add_telefone">+</button><br>
+                <p id="mensagem_telefone"></p>
+            </div>
+
+            <!--Campo endereço ----------------------------------------------------------------------->
+            <label>Endereço</label><br><br>
+            <div id="endereco">
+
+                <!--Campo país ----------------------------------------------------------------------->
+                <label>País:</label>
+                <input type="text" id="pais" placeholder="Ex: Brasil" required><br>
+                <p id="mensagem_pais"></p>
+
+                <!--Campo estado ----------------------------------------------------------------------->
+                <label>Estado:</label>
+                <select id="estado">
+                    <option value=""></option>
+                    <option value="ac">AC</option>
+                    <option value="ac">AC</option>
+                    <option value="al">AL</option>
+                    <option value="ap">AP</option>
+                    <option value="am">AM</option>
+                    <option value="ba">BA</option>
+                    <option value="ce">CE</option>
+                    <option value="es">ES</option>
+                    <option value="go">GO</option>
+                    <option value="df">DF</option>
+                    <option value="ma">MA</option>
+                    <option value="mt">MT</option>
+                    <option value="ms">MS</option>
+                    <option value="mg">MG</option>
+                    <option value="pa">PA</option>
+                    <option value="pb">PB</option>
+                    <option value="pr">PR</option>
+                    <option value="pe">PE</option>
+                    <option value="pi">PI</option>
+                    <option value="rj">RJ</option>
+                    <option value="rn">RN</option>
+                    <option value="rs">RS</option>
+                    <option value="ro">RO</option>
+                    <option value="rr">RR</option>
+                    <option value="sc">SC</option>
+                    <option value="sp">SP</option>
+                    <option value="se">SE</option>
+                    <option value="to">TO</option>
+                </select><br><br>
+                <p id="mensagem_estado"></p>
+
+                <!--Campo cidade ----------------------------------------------------------------------->
+                <label>Cidade:</label>
+                <input type="text" id="cidade" placeholder="Digite o nome da cidade..." required><br>
+                <p id="mensagem_cidade"></p>
+
+                <!--Campo rua ----------------------------------------------------------------------->
+                <label>Rua:</label>
+                <input type="text" id="rua" placeholder="Digite o nome da rua..." required><br>
+                <p id="mensagem_rua"></p>
+
+                <!--Campo numero ----------------------------------------------------------------------->
+                <label>Número:</label>
+                <input type="number" id="numero" placeholder="Número da casa" required><br>
+                <p id="mensagem_numero"></p>
+
+                <!--Campo bairro ----------------------------------------------------------------------->
+                <label>Bairro:</label>
+                <input type="text" id="bairro" placeholder="Digite o bairro..." required><br>
+                <p id="mensagem_bairro"></p>
+
+                <!--Campo CEP ----------------------------------------------------------------------->
+                <label>CEP:</label>
+                <input type="text" id="cep" placeholder="Ex: 00000-000" required><br><br>
+                <p id="mensagem_cep"></p>
             </div><br><br>
 
-            <label>Telefone:</label><br><br>
-            <input type="text" id="telefone" placeholder="(00)00000-0000" required>
-            <button type="button" id="add_telefone">Adicionar Telefone</button>
-            
+            <!--Campo senha ----------------------------------------------------------------------->
             <label>Senha:</label><br><br>
-            <input type="password" id="senha" placeholder="Crie uma senha" required><br><br>
+            <input type="password" id="senha" placeholder="Crie uma senha" required>
+            <!--Esse é o ícone do olho que irá permitir a visualização ou não da senha -------------------------------------->
+            <i class="bi bi-eye-fill icone" id="mostrar_esconder"></i>
+            <p id="validarSenha"></p>
+            <p id="mensagem_senha"></p>
+
+            <!--requisitos obrigatórios da senha ----------------------------------------------------------------------->
             <ul>
                 <li id="maiusculas">Deve conter letras maiúsculas</li>
                 <li id="minusculas">Deve conter letras minusculas</li>
                 <li id="numero">Deve conter números</li>
-                <li id="caracteres">Deve conter caracteres especiais, ex: @, #, $, *</li>
-                <li id="minimo">Deve conter mais de 8 digitos</li>
+                <li id="min">Deve conter no mínimo 8 digitos</li>
             </ul>
-
+            
+            
+            <!--Campo confirmar senha ----------------------------------------------------------------------->
             <label>Confirme sua senha:</label><br><br>
-            <input type="password" id="confirm_senha" placeholder="Crie uma senha" required><br><br>
+            <input type="password" id="confirm_senha" placeholder="Crie uma senha" required>
+            <!--Esse é o ícone do olho que irá permitir a visualização ou não da senha -------------------------------------->
+            <i class="bi bi-eye-fill icone" id="botao_senha"></i>
+            <p id="mensagem_confirm"></p>
 
             <button type="button" id="cadastrar">Cadastrar</button>
     </div>

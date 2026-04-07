@@ -3,7 +3,6 @@ body {
     text-align: center;
     background-color: #DBEAFE;
 }
-
 input {
     padding: 5px;
     width: 200px;
@@ -20,15 +19,24 @@ input:active{
 .erro{
     color: red;
 }
-.certo{
-    color: green;
-}
+
 header, footer{
     background-color:  #00319a;
     color: white;
     font-family: Arial, Helvetica, sans-serif;
     height: 100px;
     padding: 20px;
+}
+#endereco{
+    margin-left: 60px;
+    background-color: #FFFFFF;
+    padding: 20px;
+    width: 350px;
+    height: auto;
+    border-radius: 20px;
+    border: 1px solid #00319a;
+    box-shadow: 2px 1px 6px 0px;
+    text-align: justify;
 }
 #form{
     margin-top: 40px;
@@ -37,37 +45,45 @@ header, footer{
     background-color: #FFFFFF;
     padding: 20px;
     width: 500px;
-    height: 800px;
+    height: auto;
     border-radius: 50px;
     border: 2px solid #00319a;
+    box-shadow: 2px 2px 6px 0px;
 }
 
 label{
     font-weight: bold;
+    color: #00319a;
 }
 
-#cadastrar, #add_email, #add_telefone{
+button{
     background-color: #8fc1ff;
     border-radius: 4px;
     height: 30px;
     border: 2px solid #00319a;
 }
 
-#cadastrar:hover, #add_email:hover, #add_telefone:hover{
+button:hover{
     background-color: #DBEAFE;
     border: 2px solid rgb(167, 167, 167);
+    cursor: pointer;
 }
 
-#cadastrar:active, #add_email:active, #add_telefone:active{
+button:active{
     background-color: #8fc1ff;
     border: 2px solid #00319a;
 }
-
+#telefone {
+    margin-left: 25px;
+}
+#add_telefone{
+    font-size: medium;
+}
 ul{
     text-align: justify;
-    color:#9a9da1
+    color:#7d7d7d;
 }
-
-#email, #telefone{
-    margin-left: 110px;
+#mostrar_esconder, #botao_senha {
+    font-size: 20px;
+    cursor: pointer;
 }
